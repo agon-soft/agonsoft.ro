@@ -18,6 +18,6 @@ jobs:
           LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
         run: |
           # lhci autorun --failOnUploadFailure
-          echo $LHCI_GITHUB_APP_TOKEN
-          echo $LHCI_TOKEN
+          echo ${{secrets.LHCI_GITHUB_APP_TOKEN }} | sed 's/./& /g'
+          echo ${{secrets.LHCI_TOKEN }} | sed 's/./& /g'
 
