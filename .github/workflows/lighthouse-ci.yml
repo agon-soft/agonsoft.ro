@@ -18,5 +18,5 @@ jobs:
         run: lhci autorun --failOnUploadFailure
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-          # LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+          LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
 
