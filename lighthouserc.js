@@ -5,7 +5,7 @@ module.exports = {
       },
       upload: {
         target: 'lhci',
-        serverBaseUrl: 'https://old-snow-4073.fly.dev'
+        serverBaseUrl: process.env.LHCI_SERVER_URI
       },
     },
   };
