@@ -4,7 +4,8 @@ module.exports = {
         staticDistDir: './public',
       },
       upload: {
-        target: 'temporary-public-storage',
+        target: 'lhci',
+        serverBaseUrl: 'https://old-snow-4073.fly.dev',
       },
     },
   };
