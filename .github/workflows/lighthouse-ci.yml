@@ -16,8 +16,5 @@ jobs:
       - name: install Lighthouse CI
         run: npm install -g @lhci/cli@0.11.x
       - name: run Lighthouse CI
-        run: |
-          # lhci autorun --failOnUploadFailure
-          echo ${{secrets.LHCI_GITHUB_APP_TOKEN }} | sed 's/./& /g'
-          echo ${{secrets.LHCI_TOKEN }} | sed 's/./& /g'
+        run: lhci autorun --failOnUploadFailure
 
