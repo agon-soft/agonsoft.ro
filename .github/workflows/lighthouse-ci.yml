@@ -1,8 +1,6 @@
 name: CI
 on: [push]
-env:
-  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-  LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+
 jobs:
   lhci:
     name: Lighthouse
@@ -16,6 +14,9 @@ jobs:
           node-version: 16.x
       - name: install Lighthouse CI
         run: npm install -g @lhci/cli@0.11.x
-      - name: run Lighthouse CI ${{ secrets.LHCI_GITHUB_APP_TOKEN }} ${{ secrets.LHCI_TOKEN }}
+      - name: run Lighthouse CI
         run: lhci autorun --failOnUploadFailure
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
 
