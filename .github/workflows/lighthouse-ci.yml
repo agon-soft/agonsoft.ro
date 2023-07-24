@@ -14,5 +14,7 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.11.x
           echo $LHCI_TOKEN
-          lhci autorun --upload.token=${{ secrets.LHCI_TOKEN }}
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
 
