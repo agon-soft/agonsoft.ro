@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production npx @tailwindcss/cli -i src/main.css -o public/main.css",
+    "build": "npx @tailwindcss/cli -i src/main.css -o public/main.css --minify",
     "watch-css": "npx @tailwindcss/cli -i src/main.css -o public/main.css --watch",
     "live-server": "live-server public --port=3000",
     "dev": "npm-run-all --parallel watch-css live-server"
